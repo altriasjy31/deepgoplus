@@ -79,11 +79,11 @@ def main(go_file, train_data_file, test_data_file, terms_file, model_file,
          out_file, split, batch_size, epochs, load, logger_file, threshold,
          device, params_index):
     params = {
-        'max_kernel': 129,
+        'max_kernel': 64,
         'initializer': 'glorot_normal',
         'dense_depth': 0,
-        'nb_filters': 512,
-        'optimizer': Adam(lr=3e-4),
+        'nb_filters': 256,
+        'optimizer': Adam(lr=1e-3),
         'loss': 'binary_crossentropy'
     }
     # SLURM JOB ARRAY INDEX
